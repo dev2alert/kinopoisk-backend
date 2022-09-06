@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "target": "ES2020",
+        "module": "CommonJS",
+        "noEmitOnError": true,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@app": ["./app"],
+            "@env": ["./env"],
+            "@logger": ["./logger"]
+        }
+    }
+}

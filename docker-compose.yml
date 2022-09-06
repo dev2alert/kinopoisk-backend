@@ -1,0 +1,27 @@
+version: "3"
+services:
+  app:
+    image: dev2alert/kinopoisk
+    container_name: kinopoisk
+    ports:
+      - 80:80
+    environment:
+      DATABASE_HOST: db
+      DATABASE_USER: dev2alert
+      DATABASE_PASSWORD: dDgv245asFgaRpGmlTdsgwlsbda43y7
+    restart: always
+    depends_on:
+      - db
+  db:
+    image: mysql
+    container_name: kinopoisk-db
+    ports: 
+      - 3306:3306
+    volumes:
+      - ./data/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: dDgv245asFgaRpGmlTdsgwlsbda43y7fdgtdhf354545343fsdgfdfgjjfgfF
+      MYSQL_DATABASE: kinopoisk
+      MYSQL_USER: dev2alert
+      MYSQL_PASSWORD: dDgv245asFgaRpGmlTdsgwlsbda43y7
+    restart: always
